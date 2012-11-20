@@ -1,0 +1,2 @@
+CONNECT 'jdbc:derby:lmdb;create=false'  USER 'sa' PASSWORD 'licman';
+CONNECT 'jdbc:derby:lmdb;create=false;shutdown=true'  USER 'sa' PASSWORD 'licman';

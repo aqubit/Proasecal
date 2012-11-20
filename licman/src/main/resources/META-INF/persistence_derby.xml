@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence persistence_2_0.xsd ">
+	<persistence-unit name="licmanPU" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>com.proasecal.licman.vo.ProductoVO</class>
+		<class>com.proasecal.licman.vo.ClienteVO</class>
+		<class>com.proasecal.licman.vo.LicenciaVO</class>
+		<class>com.proasecal.licman.vo.PatrocinadorVO</class>
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		<properties>
+			<!-- Normal -->
+			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/lmdb" />
+			<!-- Embedded -->
+			<!--property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" 
+				/> <property name="javax.persistence.jdbc.url" value="jdbc:derby:lmdb" / -->
+			<property name="javax.persistence.jdbc.password" value="licman" />
+			<property name="javax.persistence.jdbc.user" value="sa" />
+			<!--Hibernate -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.DerbyDialect" />
+			<property name="hibernate.connection.autocommit" value="false" />
+			<property name="hibernate.use_sql_comments" value="true" />
+			<property name="hibernate.jdbc.batch_size" value="100" />
+			<property name="hibernate.max_fetch_depth" value="6" />
+			<!--property name="hibernate.cache.provider_class" value="org.hibernate.cache.SingletonEhCacheProvider" 
+				/> <property name="hibernate.cache.use_second_level_cache" value="true" /> 
+				<property name="hibernate.cache.use_query_cache" value="true" /> <property 
+				name="hibernate.cache.region.factory_class" value="org.hibernate.cache.ehcache.EhCacheRegionFactory" 
+				/> <property name="show_sql" value="false" / -->
+			<!--property name="hibernate.hbm2ddl.auto" value="create" / -->
+		</properties>
+	</persistence-unit>
+</persistence>
