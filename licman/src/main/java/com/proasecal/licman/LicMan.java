@@ -8,7 +8,7 @@ import com.proasecal.licman.svcs.ConfigManager;
 import com.proasecal.licman.svcs.DBManager;
 import com.proasecal.licman.svcs.LoggerManager;
 
-public class LicMan {
+public class LicMan2 {
 
 	private static org.apache.log4j.Logger LOGGER = org.apache.log4j.Logger
 			.getLogger(LicMan.class);
